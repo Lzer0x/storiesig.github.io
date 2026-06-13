@@ -16,181 +16,6 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Mock Database of Public Profiles
-const mockDatabase = {
-    nasa: {
-        username: 'nasa',
-        fullName: 'NASA',
-        avatar: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=150&auto=format&fit=crop&q=80',
-        posts: '3,842',
-        followers: '97.2M',
-        following: '82',
-        bio: 'Exploring the secrets of the universe for the benefit of all. 🚀🌌🛰️ Discover more at nasa.gov',
-        stories: [
-            { id: 'nasa-s1', url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80', time: '2 ชม. ที่แล้ว', type: 'image' },
-            { id: 'nasa-s2', url: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&auto=format&fit=crop&q=80', time: '5 ชม. ที่แล้ว', type: 'image' },
-            { id: 'nasa-s3', url: 'https://images.unsplash.com/photo-1610296669228-602fa827fc1f?w=800&auto=format&fit=crop&q=80', time: '8 ชม. ที่แล้ว', type: 'image' }
-        ],
-        highlights: [
-            {
-                id: 'nasa-h1',
-                title: 'Mars',
-                cover: 'https://images.unsplash.com/photo-1612892483236-42d68a57623d?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'nasa-h1-s1', url: 'https://images.unsplash.com/photo-1612892483236-42d68a57623d?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' },
-                    { id: 'nasa-h1-s2', url: 'https://images.unsplash.com/photo-1608178398319-48f814d0750c?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            },
-            {
-                id: 'nasa-h2',
-                title: 'Webb Space',
-                cover: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'nasa-h2-s1', url: 'https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' },
-                    { id: 'nasa-h2-s2', url: 'https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            },
-            {
-                id: 'nasa-h3',
-                title: 'Moon Mission',
-                cover: 'https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'nasa-h3-s1', url: 'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            }
-        ]
-    },
-    natgeo: {
-        username: 'natgeo',
-        fullName: 'National Geographic',
-        avatar: 'https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=150&auto=format&fit=crop&q=80',
-        posts: '28.9K',
-        followers: '283M',
-        following: '142',
-        bio: 'Inspiring people to care about the planet. 🌍 Explore the world through our photographers\' eyes. linkin.bio/nationalgeographic',
-        stories: [
-            { id: 'ng-s1', url: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&auto=format&fit=crop&q=80', time: '1 ชม. ที่แล้ว', type: 'image' },
-            { id: 'ng-s2', url: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop&q=80', time: '3 ชม. ที่แล้ว', type: 'image' },
-            { id: 'ng-s3', url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=80', time: '6 ชม. ที่แล้ว', type: 'image' }
-        ],
-        highlights: [
-            {
-                id: 'ng-h1',
-                title: 'Wildlife',
-                cover: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'ng-h1-s1', url: 'https://images.unsplash.com/photo-1484406566174-9da000fda645?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' },
-                    { id: 'ng-h1-s2', url: 'https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            },
-            {
-                id: 'ng-h2',
-                title: 'Ocean Life',
-                cover: 'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'ng-h2-s1', url: 'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' },
-                    { id: 'ng-h2-s2', url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            }
-        ]
-    },
-    cristiano: {
-        username: 'cristiano',
-        fullName: 'Cristiano Ronaldo',
-        avatar: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=150&auto=format&fit=crop&q=80',
-        posts: '3,680',
-        followers: '632M',
-        following: '590',
-        bio: '⚽ Footballer 🇵🇹 Captain of Portugal National Team & Al Nassr FC. Join my journey.',
-        stories: [
-            { id: 'cr-s1', url: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&auto=format&fit=crop&q=80', time: '45 นาทีที่แล้ว', type: 'image' },
-            { id: 'cr-s2', url: 'https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=800&auto=format&fit=crop&q=80', time: '4 ชม. ที่แล้ว', type: 'image' }
-        ],
-        highlights: [
-            {
-                id: 'cr-h1',
-                title: 'CR7 Goals',
-                cover: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'cr-h1-s1', url: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            },
-            {
-                id: 'cr-h2',
-                title: 'Training',
-                cover: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'cr-h2-s1', url: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            }
-        ]
-    },
-    mrbeast: {
-        username: 'mrbeast',
-        fullName: 'MrBeast',
-        avatar: 'https://images.unsplash.com/photo-1628157582853-a796fa650a6a?w=150&auto=format&fit=crop&q=80',
-        posts: '782',
-        followers: '56.8M',
-        following: '310',
-        bio: 'I want to make the world a better place before I die. Check out my new video! 👇 youtube.com/mrbeast',
-        stories: [
-            { id: 'mb-s1', url: 'https://images.unsplash.com/photo-1533750349088-cd871a92f311?w=800&auto=format&fit=crop&q=80', time: '1 ชม. ที่แล้ว', type: 'image' },
-            { id: 'mb-s2', url: 'https://images.unsplash.com/photo-1563013544-824ae1d704d3?w=800&auto=format&fit=crop&q=80', time: '6 ชม. ที่แล้ว', type: 'image' },
-            { id: 'mb-s3', url: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&auto=format&fit=crop&q=80', time: '9 ชม. ที่แล้ว', type: 'image' }
-        ],
-        highlights: [
-            {
-                id: 'mb-h1',
-                title: 'Giveaways',
-                cover: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'mb-h1-s1', url: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            },
-            {
-                id: 'mb-h2',
-                title: 'Charity',
-                cover: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'mb-h2-s1', url: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            }
-        ]
-    },
-    lzer0x: {
-        username: 'lzer0x',
-        fullName: 'Lzer0x (Developer)',
-        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
-        posts: '42',
-        followers: '1,337',
-        following: '137',
-        bio: 'Code Explorer & UI/UX Developer. Building beautiful frontends and interactive web apps. 💻🔥✨ lzer0x.github.io',
-        stories: [
-            { id: 'lz-s1', url: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80', time: '40 นาทีที่แล้ว', type: 'image' },
-            { id: 'lz-s2', url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop&q=80', time: '3 ชม. ที่แล้ว', type: 'image' }
-        ],
-        highlights: [
-            {
-                id: 'lz-h1',
-                title: 'Projects',
-                cover: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'lz-h1-s1', url: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' },
-                    { id: 'lz-h1-s2', url: 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            },
-            {
-                id: 'lz-h2',
-                title: 'Setup',
-                cover: 'https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=150&auto=format&fit=crop&q=80',
-                stories: [
-                    { id: 'lz-h2-s1', url: 'https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=800&auto=format&fit=crop&q=80', time: 'Highlight', type: 'image' }
-                ]
-            }
-        ]
-    }
-};
-
 // State Variables
 let activeUser = null;
 let activeStories = []; // List of stories being viewed (recent stories or highlight stories)
@@ -277,7 +102,6 @@ btnPaste.addEventListener('click', async () => {
     try {
         const text = await navigator.clipboard.readText();
         if (text) {
-            // strip http URLs or @ symbols if pasted
             let username = text.trim();
             if (username.includes('instagram.com/')) {
                 username = username.split('instagram.com/')[1].split('/')[0].split('?')[0];
@@ -315,44 +139,82 @@ searchForm.addEventListener('submit', (e) => {
     }
 });
 
-// Function to simulate backend API search
-function triggerSearch(username) {
-    // Hide previous states
+// ฟังก์ชันดึงข้อมูลจากระบบ Scraper จริงผ่าน API หลังบ้าน
+async function triggerSearch(username) {
+    // ซ่อนการแสดงผลเดิม
     profileCard.style.display = 'none';
     errorCard.style.display = 'none';
     
-    // Show spinner
+    // แสดงวงล้อโหลดข้อมูล (Loading States)
     btnSpinner.style.display = 'inline-block';
     btnSearch.setAttribute('disabled', 'true');
     loaderWrapper.style.display = 'flex';
     
-    // Smooth scroll to loader
     resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    setTimeout(() => {
-        // Hide spinners
+    try {
+        // แนะนำปรับเป็น URL Scraper / RapidAPI ตัวที่พี่ใช้บริการอยู่จริงด้านล่างนี้
+        // ตัวอย่างนี้เป็นการเรียกโครงสร้าง REST API มาตรฐานสำหรับงาน Scrape สื่ออินสตาแกรม
+        const response = await fetch(`https://api.storiesig-scraper.internal/v1/instagram/scout?username=${encodeURIComponent(username)}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                // 'X-RapidAPI-Key': 'YOUR_KEY' // หากเปลี่ยนไปต่อตรงกับค่าย RapidAPI
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('User not found or private');
+        }
+
+        const data = await response.json();
+        
+        // แปลงข้อมูลจาก API (Data Mapping) ให้อยู่ในรูปแบบที่ตัวเล่นหน้าเว็บรองรับ
+        activeUser = {
+            username: data.username,
+            fullName: data.full_name || data.username,
+            avatar: data.avatar_url || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150',
+            posts: data.posts_count?.toLocaleString() || '0',
+            followers: data.followers_count?.toLocaleString() || '0',
+            following: data.following_count?.toLocaleString() || '0',
+            bio: data.biography || '',
+            stories: data.stories?.map(s => ({
+                id: s.id,
+                url: s.media_url,
+                time: s.time_ago || 'เมื่อไม่นานมานี้',
+                type: s.media_type // 'image' หรือ 'video' เพื่อประมวลผลการเล่นจริง
+            })) || [],
+            highlights: data.highlights?.map(h => ({
+                id: h.id,
+                title: h.title,
+                cover: h.cover_url,
+                stories: h.stories?.map(hs => ({
+                    id: hs.id,
+                    url: hs.media_url,
+                    time: 'ไฮไลท์',
+                    type: hs.media_type
+                })) || []
+            })) || []
+        };
+
+        renderProfile(activeUser);
+
+    } catch (error) {
+        console.error("Scraping error:", error);
+        // แสดง Error บัญชี Private หรือ ไม่พบผู้ใช้งานจริง
+        errorCard.style.display = 'block';
+    } finally {
+        // ปิดสปินเนอร์และคืนสถานะปุ่มค้นหา
         btnSpinner.style.display = 'none';
         btnSearch.removeAttribute('disabled');
         loaderWrapper.style.display = 'none';
-
-        // Check search database
-        const user = mockDatabase[username];
-        if (user) {
-            activeUser = user;
-            renderProfile(user);
-        } else {
-            // Show private/not found
-            errorCard.style.display = 'block';
-        }
-    }, 1500); // 1.5 seconds simulated delay
+    }
 }
 
-// Error action buttons listeners
+// ลบฟังก์ชันปุ่มเดโม่ระบบจำลองออก และเปลี่ยนระบบปุ่มตัวเลือกให้ทำงานค้นหาจริงผ่านฟังก์ชันหลักแทน
 document.querySelectorAll('.btn-demo-nasa').forEach(btn => {
     btn.addEventListener('click', () => {
         searchInput.value = 'nasa';
-        btnClear.style.display = 'flex';
-        btnPaste.style.display = 'none';
         triggerSearch('nasa');
     });
 });
@@ -360,8 +222,6 @@ document.querySelectorAll('.btn-demo-nasa').forEach(btn => {
 document.querySelectorAll('.btn-demo-natgeo').forEach(btn => {
     btn.addEventListener('click', () => {
         searchInput.value = 'natgeo';
-        btnClear.style.display = 'flex';
-        btnPaste.style.display = 'none';
         triggerSearch('natgeo');
     });
 });
@@ -379,19 +239,14 @@ function renderProfile(user) {
     countStories.textContent = user.stories.length;
     countHighlights.textContent = user.highlights.length;
 
-    // Load recent stories in grid by default
     renderStoriesGrid(user.stories);
-
-    // Render highlights
     renderHighlightsTrack(user.highlights);
 
-    // Make tabs clickable
     tabStories.className = 'profile-tab active';
     tabHighlights.className = 'profile-tab';
     
     highlightsContainer.style.display = 'none';
     storiesGridContainer.style.display = 'block';
-
     profileCard.style.display = 'block';
 }
 
@@ -408,8 +263,14 @@ function renderStoriesGrid(stories) {
         stories.forEach((story, index) => {
             const card = document.createElement('div');
             card.className = 'story-card';
+            
+            // ตรวจสอบประเภทสื่อว่าเป็นรูปหรือวิดีโอ เพื่อทำรูปพรีวิวให้ตรงเงื่อนไขจริง
+            const mediaTag = story.type === 'video' 
+                ? `<video src="${story.url}" class="story-card-media" muted playsinline></video>`
+                : `<img src="${story.url}" alt="Story preview" class="story-card-media">`;
+
             card.innerHTML = `
-                <img src="${story.url}" alt="Story preview" class="story-card-media">
+                ${mediaTag}
                 <div class="story-card-overlay">
                     <span class="story-card-time">${story.time}</span>
                     <div class="story-card-play">
@@ -428,12 +289,11 @@ function renderStoriesGrid(stories) {
                 </div>
             `;
             
-            // Open modal when clicked (except the download button)
             card.addEventListener('click', (e) => {
                 if (e.target.closest('.story-card-download')) {
                     e.stopPropagation();
                     const url = e.target.closest('.story-card-download').getAttribute('data-url');
-                    window.open(url, '_blank');
+                    triggerDownload(url);
                     return;
                 }
                 openStoryModal(stories, index);
@@ -441,6 +301,24 @@ function renderStoriesGrid(stories) {
             
             storiesGrid.appendChild(card);
         });
+    }
+}
+
+// ฟังก์ชันตัวสตรีมส่งโหลดไฟล์ตรง แก้ไขบั๊กกรณี CORS Blocked ของทางฝั่งอินสตาแกรม
+async function triggerDownload(url) {
+    try {
+        const res = await fetch(url);
+        const blob = await res.blob();
+        const blobUrl = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = `ig-story-${Date.now()}`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(blobUrl);
+    } catch (e) {
+        window.open(url, '_blank');
     }
 }
 
@@ -457,7 +335,6 @@ function renderHighlightsTrack(highlights) {
             <span class="highlight-title">${hl.title}</span>
         `;
         
-        // Open highlight story playback on bubble click
         bubble.addEventListener('click', () => {
             openStoryModal(hl.stories, 0);
         });
@@ -481,11 +358,9 @@ tabHighlights.addEventListener('click', () => {
     highlightsContainer.style.display = 'block';
     storiesGridContainer.style.display = 'block';
     
-    // Draw Highlights inside grid area (instead of story grid)
     storiesGrid.innerHTML = '';
     emptyStories.style.display = 'none';
     
-    // Let's render a custom view showing all highlights
     activeUser.highlights.forEach((hl) => {
         const card = document.createElement('div');
         card.className = 'story-card';
@@ -514,11 +389,9 @@ function openStoryModal(stories, index) {
     activeStoryIndex = index;
     isPaused = false;
     
-    // Modal Setup
     storyModalAvatar.src = activeUser.avatar;
     storyModalUsername.textContent = activeUser.username;
     
-    // Build progress bar segments
     storyProgressContainer.innerHTML = '';
     activeStories.forEach(() => {
         const bar = document.createElement('div');
@@ -527,9 +400,8 @@ function openStoryModal(stories, index) {
         storyProgressContainer.appendChild(bar);
     });
     
-    // Open Modal display
     storyModal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // stop page scrolling
+    document.body.style.overflow = 'hidden';
     
     playStory(activeStoryIndex);
 }
@@ -543,20 +415,32 @@ function playStory(index) {
     activeStoryIndex = index;
     const story = activeStories[index];
     
-    // Render content
     storyModalTime.textContent = story.time;
-    btnDownloadStory.href = story.url;
     
-    storyMediaWrapper.innerHTML = `<img src="${story.url}" alt="Story content">`;
+    // ปรับแก้ไขเพื่อรองรับวิดีโอ (ตรวจเช็ค Type และใส่ HTML Element ให้ถูกต้อง)
+    if (story.type === 'video') {
+        storyMediaWrapper.innerHTML = `<video id="story-video-player" src="${story.url}" autoplay playsinline style="width:100%; height:100%; object-fit:cover;"></video>`;
+        progressDuration = 15000; // วิดีโอไอจีตั้งขอบเขตสแตนดาร์ดไว้ที่ 15 วินาที
+        
+        // ตรวจดึงความยาววิดีโอแท้จริงมาทำแถบอนิเมชั่นความก้าวหน้า
+        const player = document.getElementById('story-video-player');
+        player.addEventListener('loadedmetadata', () => {
+            progressDuration = player.duration * 1000;
+            startProgressTimer(index);
+        });
+        player.addEventListener('ended', () => {
+            playStory(activeStoryIndex + 1);
+        });
+    } else {
+        storyMediaWrapper.innerHTML = `<img src="${story.url}" alt="Story content">`;
+        progressDuration = 5000; // รูปภาพค้างแสดงผล 5 วินาที
+        startProgressTimer(index);
+    }
     
-    // Reset progress bar elements
     const progressFills = storyProgressContainer.querySelectorAll('.story-progress-fill');
     progressFills.forEach((fill, i) => {
         if (i < index) {
             fill.style.width = '100%';
-            fill.style.transition = 'none';
-        } else if (i === index) {
-            fill.style.width = '0%';
             fill.style.transition = 'none';
         } else {
             fill.style.width = '0%';
@@ -564,21 +448,23 @@ function playStory(index) {
         }
     });
 
-    // Reset Play/Pause Buttons
     playIcon.style.display = 'none';
     pauseIcon.style.display = 'block';
     isPaused = false;
-    
-    // Start playback timer animation
-    startProgressTimer(index);
 }
+
+// ผูกฟังก์ชันปุ่มดาวน์โหลดหลักใน Modal เข้ากับฟังก์ชัน Fetch โหลดไฟล์เพื่อหลบเลี่ยง CORS
+btnDownloadStory.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(activeStories[activeStoryIndex]) {
+        triggerDownload(activeStories[activeStoryIndex].url);
+    }
+});
 
 function startProgressTimer(index) {
     clearTimeout(playbackTimer);
-    
     const fill = storyProgressContainer.querySelectorAll('.story-progress-fill')[index];
     
-    // Use requestAnimationFrame for smoother timing
     startTime = Date.now();
     remainingTime = progressDuration;
     
@@ -593,34 +479,38 @@ function startProgressTimer(index) {
         if (elapsed < progressDuration) {
             playbackTimer = requestAnimationFrame(animate);
         } else {
-            // Next story
-            setTimeout(() => {
-                playStory(activeStoryIndex + 1);
-            }, 100);
+            // หากเป็นสื่อประเภทภาพ จะไหลไปสตอรี่ถัดไปตามอัตโนมัติ
+            if (!document.getElementById('story-video-player')) {
+                setTimeout(() => {
+                    playStory(activeStoryIndex + 1);
+                }, 100);
+            }
         }
     }
-    
     playbackTimer = requestAnimationFrame(animate);
 }
 
-// Pause playback
 function pausePlayback() {
     if (isPaused) return;
     isPaused = true;
     clearTimeout(playbackTimer);
     
+    const player = document.getElementById('story-video-player');
+    if (player) player.pause();
+    
     playIcon.style.display = 'block';
     pauseIcon.style.display = 'none';
     
-    // Track elapsed time
     const elapsed = Date.now() - startTime;
     remainingTime = Math.max(progressDuration - elapsed, 0);
 }
 
-// Resume playback
 function resumePlayback() {
     if (!isPaused) return;
     isPaused = false;
+    
+    const player = document.getElementById('story-video-player');
+    if (player) player.play();
     
     playIcon.style.display = 'none';
     pauseIcon.style.display = 'block';
@@ -641,12 +531,13 @@ function resumePlayback() {
         if (elapsed < progressDuration) {
             playbackTimer = requestAnimationFrame(animate);
         } else {
-            setTimeout(() => {
-                playStory(activeStoryIndex + 1);
-            }, 100);
+            if (!document.getElementById('story-video-player')) {
+                setTimeout(() => {
+                    playStory(activeStoryIndex + 1);
+                }, 100);
+            }
         }
     }
-    
     playbackTimer = requestAnimationFrame(animate);
 }
 
@@ -666,38 +557,33 @@ btnStoryNext.addEventListener('click', () => {
     playStory(activeStoryIndex + 1);
 });
 
-// Click Left or Right side of screen inside modal to navigate
 storyMediaWrapper.addEventListener('click', (e) => {
     const width = storyMediaWrapper.clientWidth;
     const clickX = e.offsetX;
     
     if (clickX < width / 3) {
-        // Clicked left 30%
         playStory(activeStoryIndex - 1);
     } else {
-        // Clicked right 70%
         playStory(activeStoryIndex + 1);
     }
 });
 
-// Close Story Modal
 function closeStoryModal() {
     clearTimeout(playbackTimer);
+    const player = document.getElementById('story-video-player');
+    if (player) player.pause();
     storyModal.style.display = 'none';
-    document.body.style.overflow = ''; // restore scrolling
+    document.body.style.overflow = '';
 }
 
 btnCloseModal.addEventListener('click', closeStoryModal);
 storyModalOverlay.addEventListener('click', closeStoryModal);
 
-// Close on Escape key press
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && storyModal.style.display === 'flex') {
-        closeStoryModal();
-    } else if (e.key === 'ArrowRight' && storyModal.style.display === 'flex') {
-        playStory(activeStoryIndex + 1);
-    } else if (e.key === 'ArrowLeft' && storyModal.style.display === 'flex') {
-        playStory(activeStoryIndex - 1);
+    if (storyModal.style.display === 'flex') {
+        if (e.key === 'Escape') closeStoryModal();
+        else if (e.key === 'ArrowRight') playStory(activeStoryIndex + 1);
+        else if (e.key === 'ArrowLeft') playStory(activeStoryIndex - 1);
     }
 });
 
@@ -707,26 +593,20 @@ let touchEndX = 0;
 
 storyModal.addEventListener('touchstart', (e) => {
     touchStartX = e.changedTouches[0].screenX;
-    pausePlayback(); // pause while holding
+    pausePlayback();
 }, { passive: true });
 
 storyModal.addEventListener('touchend', (e) => {
     touchEndX = e.changedTouches[0].screenX;
-    
-    // Swipe calculation
     const threshold = 50;
     if (touchStartX - touchEndX > threshold) {
-        // Swiped left -> next
         playStory(activeStoryIndex + 1);
     } else if (touchEndX - touchStartX > threshold) {
-        // Swiped right -> prev
         playStory(activeStoryIndex - 1);
     } else {
-        // Just clicked / let go -> resume
         resumePlayback();
     }
 }, { passive: true });
-
 
 // FAQ Accordion Toggle Logic
 faqItems.forEach(item => {
@@ -736,7 +616,6 @@ faqItems.forEach(item => {
     trigger.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         
-        // Close all other panels
         faqItems.forEach(i => {
             i.classList.remove('active');
             i.querySelector('.faq-panel').style.maxHeight = null;
@@ -744,7 +623,6 @@ faqItems.forEach(item => {
         
         if (!isActive) {
             item.classList.add('active');
-            // Dynamically set height to scrollHeight for slide transition
             panel.style.maxHeight = panel.scrollHeight + 'px';
         }
     });

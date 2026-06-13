@@ -788,6 +788,7 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none; /* ช่วยให้การคลิกติด Event พื้นหลังซ้อนทับได้สมบูรณ์ */
 }
 
 .story-card-overlay {
@@ -1030,6 +1031,14 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* รักษาสัดส่วนคอนเทนเนอร์แสดงผลวิดีโอตรงหน้า Modal กลางจอ */
+.story-media-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #000000;
 }
 
 /* Side navigation buttons (for desktop) */
