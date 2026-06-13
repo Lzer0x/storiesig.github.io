@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoriesIG❤️ - ดูเรื่องราวและไฮไลท์ของ Instagram โดยไม่ระบุชื่อ</title>
+    <meta name="description" content="ดูเรื่องราวบน Instagram โดยไม่เปิดเผยตัวตนได้อย่างไร? StoriesIG ของเราจะช่วยให้คุณดูและดาวน์โหลดเรื่องราวและไฮไลท์บน Instagram โดยไม่ระบุตัวตน ใช้งานได้ฟรี ทุกอุปกรณ์" />
+    
+    <!-- OpenGraph (Facebook, Line, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="StoriesIG">
+    <meta property="og:title" content="StoriesIG❤️ - ดูเรื่องราวและไฮไลท์ของ Instagram โดยไม่ระบุชื่อ">
+    <meta property="og:description" content="ดูเรื่องราวและดาวน์โหลดสตอรี่หรือไฮไลท์ของ Instagram ได้ฟรีและรวดเร็วโดยไม่ต้องใช้บัญชีของตัวเองและไม่ระบุตัวตน">
+    <meta property="og:locale" content="th">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="brand-logo" id="brand-logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="brand-logo-icon">
+                    <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-top">STORIES</span>
+                    <span class="logo-bottom">anonymous</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="#features" class="nav-link">ฟีเจอร์</a>
+                <a href="#how-to" class="nav-link">วิธีใช้งาน</a>
+                <a href="#faq" class="nav-link">คำถามที่พบบ่อย</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Search Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <h1 class="hero-title">StoriesIG - ดูสตอรี่ Instagram โดยไม่ระบุชื่อ & ดาวน์โหลด</h1>
+                <p class="hero-subtitle">ดูและดาวน์โหลด Instagram Stories และ Highlights ของคนอื่นโดยไม่เปิดเผยตัวตน สะดวด รวดเร็ว ไม่จำเป็นต้องล็อกอินหรือสมัครสมาชิก</p>
+                
+                <!-- Search Form -->
+                <form class="search-form" id="search-form">
+                    <div class="search-input-wrapper">
+                        <div class="input-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </div>
+                        <input type="text" id="search-input" class="search-input" placeholder="ใส่ชื่อผู้ใช้ เช่น nasa, natgeo, mrbeast..." autocomplete="off">
+                        
+                        <button type="button" class="btn-clear" id="btn-clear" style="display: none;" aria-label="Clear Search">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                        
+                        <button type="button" class="btn-paste" id="btn-paste" aria-label="Paste Link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                <rect x="8" y="2" width="8" height="4" rx="1"></rect>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <button type="submit" class="btn-search" id="btn-search">
+                        <span class="btn-text">ค้นหา</span>
+                        <div class="btn-spinner" id="btn-spinner" style="display: none;"></div>
+                    </button>
+                </form>
+
+                <!-- Trending / Suggested Accounts -->
+                <div class="trending-container">
+                    <span class="trending-label">บัญชีแนะนำยอดนิยม:</span>
+                    <div class="trending-badges">
+                        <button class="trend-badge" data-username="lzer0x">@lzer0x</button>
+                        <button class="trend-badge" data-username="nasa">@nasa</button>
+                        <button class="trend-badge" data-username="natgeo">@natgeo</button>
+                        <button class="trend-badge" data-username="cristiano">@cristiano</button>
+                        <button class="trend-badge" data-username="mrbeast">@mrbeast</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result / Viewer Area -->
+        <section class="result-section" id="result-section">
+            <div class="container">
+                <!-- Loader Component -->
+                <div class="loader-wrapper" id="loader-wrapper" style="display: none;">
+                    <div class="stories-loader">
+                        <div class="spinner-ring"></div>
+                        <div class="spinner-ring"></div>
+                        <div class="spinner-ring"></div>
+                    </div>
+                    <p class="loader-text">กำลังค้นหาบัญชีและตรวจสอบสตอรี่ล่าสุด...</p>
+                </div>
+
+                <!-- Error / Private Account View -->
+                <div class="error-card" id="error-card" style="display: none;">
+                    <div class="error-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="error-title">บัญชีนี้เป็นบัญชีส่วนตัว หรือไม่พบข้อมูล</h3>
+                    <p class="error-message">ไม่สามารถแสดงข้อมูลของบัญชีนี้ได้เนื่องจากนโยบายความเป็นส่วนตัวของ Instagram หรือไม่พบบัญชีดังกล่าว โปรดลองค้นหาบัญชีแนะนำสาธารณะในระบบทดลองของเรา</p>
+                    <div class="error-actions">
+                        <button class="btn-demo-nasa btn-secondary">ดูตัวอย่างบัญชี NASA</button>
+                        <button class="btn-demo-natgeo btn-secondary">ดูตัวอย่าง National Geographic</button>
+                    </div>
+                </div>
+
+                <!-- Success Profile view -->
+                <div class="profile-card" id="profile-card" style="display: none;">
+                    <!-- User Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-avatar-wrapper">
+                            <div class="profile-avatar-ring"></div>
+                            <img src="" alt="Profile Avatar" class="profile-avatar" id="profile-avatar">
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-username-row">
+                                <h2 class="profile-username" id="profile-username">nasa</h2>
+                                <span class="badge-verified">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <h3 class="profile-fullname" id="profile-fullname">NASA</h3>
+                            <div class="profile-stats">
+                                <div class="stat-item"><span class="stat-num" id="stat-posts">3,500</span> โพสต์</div>
+                                <div class="stat-item"><span class="stat-num" id="stat-followers">97M</span> ผู้ติดตาม</div>
+                                <div class="stat-item"><span class="stat-num" id="stat-following">80</span> กำลังติดตาม</div>
+                            </div>
+                            <p class="profile-bio" id="profile-bio">Exploring the secrets of the universe for the benefit of all.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tabs stories vs highlights -->
+                    <div class="profile-tabs">
+                        <button class="profile-tab active" id="tab-stories">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            สตอรี่ล่าสุด (<span id="count-stories">0</span>)
+                        </button>
+                        <button class="profile-tab" id="tab-highlights">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            ไฮไลท์ (<span id="count-highlights">0</span>)
+                        </button>
+                    </div>
+
+                    <!-- Highlights Bubble List (shown under highlights tab or profiles) -->
+                    <div class="highlights-container" id="highlights-container" style="display: none;">
+                        <div class="highlights-track" id="highlights-track">
+                            <!-- Highlights list generated via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Stories Grid (Grid list of images/videos) -->
+                    <div class="stories-grid-container" id="stories-grid-container">
+                        <div class="stories-grid" id="stories-grid">
+                            <!-- Stories list generated via JS -->
+                        </div>
+                        <div class="empty-stories" id="empty-stories" style="display: none;">
+                            <div class="empty-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                            </div>
+                            <p>ไม่มีสตอรี่ที่เปิดให้ดูใน 24 ชั่วโมงที่ผ่านมา</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Story Playback Modal -->
+        <div class="story-modal" id="story-modal" style="display: none;">
+            <div class="story-modal-overlay" id="story-modal-overlay"></div>
+            
+            <div class="story-modal-content">
+                <!-- Progress bars indicator -->
+                <div class="story-progress-container" id="story-progress-container">
+                    <!-- Segmented progress bars generated dynamically -->
+                </div>
+                
+                <!-- Story Header -->
+                <div class="story-modal-header">
+                    <div class="story-modal-user">
+                        <img src="" alt="" class="story-user-avatar" id="story-modal-avatar">
+                        <span class="story-user-name" id="story-modal-username">nasa</span>
+                        <span class="story-time" id="story-modal-time">3 ชม. ที่แล้ว</span>
+                    </div>
+                    <div class="story-modal-controls">
+                        <button class="btn-control" id="btn-play-pause" aria-label="Play or Pause Story">
+                            <!-- Pause icon -->
+                            <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="6" y="4" width="4" height="16"></rect>
+                                <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                            <!-- Play icon -->
+                            <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </button>
+                        <button class="btn-control btn-close" id="btn-close-modal" aria-label="Close Story Viewer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Story Navigation Left/Right Areas (Click areas for mobile, also buttons for desktop) -->
+                <button class="btn-nav btn-nav-left" id="btn-story-prev" aria-label="Previous Story">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <!-- Media Display Area -->
+                <div class="story-media-wrapper" id="story-media-wrapper">
+                    <!-- Image or Video tag will be loaded here -->
+                </div>
+                
+                <button class="btn-nav btn-nav-right" id="btn-story-next" aria-label="Next Story">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Footer Download Area -->
+                <div class="story-modal-footer">
+                    <a href="#" class="btn-download" id="btn-download-story" download target="_blank">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        ดาวน์โหลดข้อมูล
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <h2 class="section-title">ฟีเจอร์เด่นของ StoriesIG</h2>
+                <p class="section-subtitle">บริการดูสตอรี่อินสตาแกรมโดยไม่แสดงตัวตน พร้อมฟังก์ชันดาวน์โหลดแบบครบวงจร</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon bg-pink">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card-title">ดูแบบไม่ระบุตัวตน (Viewer)</h3>
+                        <p class="feature-card-text">ฟีเจอร์สุดยอดที่ช่วยให้คุณแอบดูสตอรี่หรือไฮไลท์ของใครก็ได้ โดยที่ไม่ปรากฏรายชื่อบัญชีของคุณในรายการผู้ชมของฝ่ายตรงข้าม ปลอดภัย 100%</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon bg-purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card-title">ตัวดาวน์โหลดวิดีโอ (Videos)</h3>
+                        <p class="feature-card-text">ดาวน์โหลดวิดีโอทั่วไป วิดีโอในสตอรี่ หรือโพสต์ต่าง ๆ บน Instagram เก็บเข้ามือถือหรือคอมพิวเตอร์ของคุณในความละเอียดระดับสูงสุดแบบไม่มีลดทอน</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon bg-orange">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card-title">ดาวน์โหลดรูปภาพ (Photos)</h3>
+                        <p class="feature-card-text">บันทึกรูปภาพโปรไฟล์ (Avatar), ภาพโพสต์ทั่วไป หรือภาพสวย ๆ ในสตอรี่ได้อย่างง่ายดาย รองรับคุณภาพดั้งเดิมของภาพสูงสุด</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon bg-red">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card-title">ดูและบันทึก IGTV & Reels</h3>
+                        <p class="feature-card-text">สนุกกับการรับชม Reels และ IGTV ยาวๆ และสามารถดาวน์โหลดเก็บไว้ดูแบบออฟไลน์ได้ทุกเมื่อ แม้ว่าต้นฉบับจะถูกลบออกไปภายหลัง</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon bg-blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="21" y1="9" x2="3" y2="9"></line>
+                                <line x1="21" y1="15" x2="3" y2="15"></line>
+                                <line x1="12" y1="3" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card-title">ตัวดาวน์โหลดแบบอัลบั้ม (Carousel)</h3>
+                        <p class="feature-card-text">ดาวน์โหลดโพสต์ที่มีรูปภาพและวิดีโอหลาย ๆ รายการในโพสต์เดียว (อัลบั้ม / โพสต์สไลด์) ได้ครบทั้งหมดในคลิกเดียว ไม่ตกหล่นเลยสักรูป</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon bg-teal">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card-title">ดูไฮไลท์ (Highlights Viewer)</h3>
+                        <p class="feature-card-text">เข้าถึงไฮไลต์เรื่องราวที่บันทึกไว้ในหน้าโปรไฟล์แบบไม่เปิดเผยตัวตน สามารถสตรีมดูไฟล์หรือดาวน์โหลดเก็บไว้ได้ทันที</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to use Section -->
+        <section class="how-to-section" id="how-to">
+            <div class="container">
+                <h2 class="section-title">ขั้นตอนการดูและดาวน์โหลดสตอรี่ Instagram</h2>
+                <p class="section-subtitle">สะดวก รวดเร็ว และไม่เปิดเผยตัวตนใน 4 ขั้นตอนสั้น ๆ</p>
+                
+                <div class="how-to-steps">
+                    <div class="how-to-step">
+                        <div class="step-num">1</div>
+                        <h3 class="step-title">หาชื่อผู้ใช้ (Username)</h3>
+                        <p class="step-text">ค้นหาและจดจำชื่อผู้ใช้งานหรือลิงก์โปรไฟล์ของบัญชี Instagram สาธารณะที่คุณต้องการเปิดดูข้อมูล</p>
+                    </div>
+                    
+                    <div class="how-to-step">
+                        <div class="step-num">2</div>
+                        <h3 class="step-title">พิมพ์หรือวางในช่องค้นหา</h3>
+                        <p class="step-text">นำชื่อผู้ใช้งาน (เช่น @nasa) มาพิมพ์หรือกดวางลงในช่องค้นหาที่ด้านบนของเว็บไซต์ StoriesIG ของเรา</p>
+                    </div>
+
+                    <div class="how-to-step">
+                        <div class="step-num">3</div>
+                        <h3 class="step-title">กดปุ่ม ค้นหา</h3>
+                        <p class="step-text">คลิกปุ่มค้นหา ระบบจะเริ่มประมวลผล ดึงข้อมูลโปรไฟล์ ไฮไลท์ และเรื่องราวสตอรี่ทั้งหมดอย่างรวดเร็ว</p>
+                    </div>
+
+                    <div class="how-to-step">
+                        <div class="step-num">4</div>
+                        <h3 class="step-title">รับชมและดาวน์โหลด</h3>
+                        <p class="step-text">ดูสตอรี่เล่นแบบเคลื่อนไหวอัตโนมัติบนหน้าจอ และกดดาวน์โหลดไฟล์รูปภาพหรือวิดีโอเก็บไว้ได้ทันที</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title">คำถามที่พบบ่อย (FAQs)</h2>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>จุดประสงค์ของบริการ StoriesIG คืออะไร?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p class="faq-content">StoriesIG เป็นเครื่องมือออนไลน์ที่ช่วยให้คุณสามารถเข้าไปเยี่ยมชม ดูโปรไฟล์ รูปภาพ ไฮไลท์ และสตอรี่ล่าสุดของบัญชี Instagram ต่าง ๆ ได้โดยไม่ให้บุคคลนั้นรู้ตัว (ไม่เปิดเผยตัวตน) รวมถึงดาวน์โหลดเก็บไว้บนอุปกรณ์ของคุณได้ฟรี</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>จำเป็นต้องใช้บัญชี Instagram ของตนเองเพื่อล็อกอินไหม?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p class="faq-content">ไม่จำเป็นเลยครับ! คุณไม่จำเป็นต้องสมัครสมาชิก ล็อกอิน หรือป้อนข้อมูลบัญชี Instagram ส่วนตัวของคุณ ปลอดภัยจากปัญหาบัญชีส่วนตัวโดนแบนหรือถูกล็อก</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>สามารถเข้าดูสตอรี่ของบัญชีที่เป็นแบบ "ส่วนตัว" (Private) ได้หรือไม่?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p class="faq-content">ไม่สามารถดูได้ครับ บริการของเราเข้าดูและดึงข้อมูลได้เฉพาะบัญชีที่เป็นสาธารณะ (Public Profiles) เท่านั้น เนื่องจากนโยบายรักษาความปลอดภัยและความเป็นส่วนตัวของ Instagram</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>ใช้งานบนอุปกรณ์ใดบ้าง และมีการจำกัดปริมาณไหม?</span>
+                            <span class="faq-icon-plus"></span>
+                        </button>
+                        <div class="faq-panel">
+                            <p class="faq-content">คุณสามารถใช้งาน StoriesIG ได้อย่างเสรีบนคอมพิวเตอร์ โน้ตบุ๊ก แท็บเล็ต สมาร์ทโฟน ทั้งบนระบบ iOS และ Android ผ่านเว็บเบราว์เซอร์ทั่วไป โดยไม่มีการจำกัดจำนวนครั้งการค้นหาหรือดาวน์โหลดแต่อย่างใด</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <span class="logo-top">STORIES</span>
+                    <span class="logo-bottom">anonymous</span>
+                </div>
+                <p class="footer-desc">เครื่องมืออำนวยความสะดวกในการเข้าชมและบันทึกสื่อออนไลน์ยอดนิยมอย่างปลอดภัย สะดวก และเป็นส่วนตัวสูงสุด</p>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p><strong>ข้อจำกัดความรับผิดชอบ:</strong> เว็บไซต์นี้ไม่ได้เป็นพาร์ทเนอร์ เป็นพันธมิตร หรือได้รับอนุญาตจาก Instagram Inc. แต่อย่างใด ลิขสิทธิ์ข้อมูล วิดีโอ และรูปภาพทั้งหมดเป็นของเจ้าของบัญชีแต่ละคน โปรดใช้งานเพื่อการศึกษาและรับชมส่วนตัวเท่านั้น</p>
+                <p class="copyright">&copy; 2026 StoriesIG. All rights reserved. Developed with ❤️ for static mockup presentation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
